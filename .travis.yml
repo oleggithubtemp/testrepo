@@ -8,7 +8,7 @@ install:
 
 script:
   - mkdir build && cd build
-  - conan install .. --build=all
+  - conan install .. --build=missing -s compiler.libcxx=libstdc++11
   - cmake ..
   - cmake --build .
   - ./bin/test_hello
